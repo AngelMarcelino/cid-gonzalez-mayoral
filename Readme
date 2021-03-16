@@ -1,0 +1,8 @@
+1. run jade
+
+java -cp .\lib\jade.jar jade.Boot -gui -port 3100
+
+2.
+
+javac -classpath lib/jade.jar -d classes src/examples/PingAgent/*.java
+
