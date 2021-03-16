@@ -2,7 +2,11 @@
 
 java -cp .\lib\jade.jar jade.Boot -gui -port 3100
 
-2.
+2. compile ping agent
 
 javac -classpath lib/jade.jar -d classes src/examples/PingAgent/*.java
+
+3. Start agents using the command line
+
+java -cp lib\jade.jar;classes jade.Boot -gui -port 3100 -agents ping1:examples.PingAgent.PingAgent 
 
