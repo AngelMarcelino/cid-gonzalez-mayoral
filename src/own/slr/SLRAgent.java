@@ -24,7 +24,7 @@ public class SLRAgent extends Agent {
         double alpha = slr.getAlpha();
         double beta = slr.getBeta();
         System.out.println("y = B_0 + (B_1)(X_1)");
-        System.out.println(String.valueOf(predictedY) + " = " + String.valueOf(alpha) + " + " + String.valueOf(beta));
+        System.out.println(String.valueOf(predictedY) + " = " + String.valueOf(alpha) + " + (" + String.valueOf(beta) + ")(" + String.valueOf(x) + ")");
       }
     });
   }
