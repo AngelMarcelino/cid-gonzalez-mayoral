@@ -1,12 +1,19 @@
+package slr;
+
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
   public static void main(String[] args) throws IOException {
     SLR slr = new SLR();
     ArrayList<DataPair> dataSet = getHardCodedDataSet();
     slr.setCollection(dataSet);
-    System.out.println(String.valueOf(slr.getPrediction(47)));
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Ingresa el valor que quieres predecir: ");
+    double toPredict = scanner.nextDouble();
+    System.out.println(String.valueOf(slr.getPrediction(toPredict)));
+    scanner.close();
   }
 
   private static ArrayList<DataPair> getHardCodedDataSet() {

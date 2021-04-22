@@ -1,3 +1,5 @@
+package slr;
+
 import java.util.ArrayList;
 
 public class SLR {
@@ -26,8 +28,6 @@ public class SLR {
     }
     this.alpha = this.calculateAlpha(dataSet.size(), xSummation, ySummation, xSquareSummation, xTimesYSummation);
     this.beta = this.calculateBeta(dataSet.size(), xSummation, ySummation, xSquareSummation, xTimesYSummation);
-    System.out.println(String.valueOf(this.alpha));
-    System.out.println(String.valueOf(this.beta));
   }
 
   private double calculateAlpha(double n, double xSummation, double ySummation, double xSquareSummation,
@@ -39,5 +39,13 @@ public class SLR {
   private double calculateBeta(double n, double xSummation, double ySummation, double xSquareSummation,
       double xTimesYSummation) {
     return (n * xTimesYSummation - xSummation * ySummation) / (n * xSquareSummation - xSummation * xSummation);
+  }
+
+  public double getAlpha() {
+    return this.alpha;
+  }
+
+  public double getBeta() {
+    return this.beta;
   }
 }

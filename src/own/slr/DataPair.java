@@ -1,3 +1,5 @@
+package slr;
+
 public class DataPair {
   private double x;
   private double y;
