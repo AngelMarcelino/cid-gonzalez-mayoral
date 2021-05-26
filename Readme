@@ -1,3 +1,6 @@
+Hands on 4&5 -> src/own/slr
+Hands on 6 .> src/own/mlr
+
 1. run jade
 
 java -cp .\lib\jade.jar jade.Boot -gui -port 3100
