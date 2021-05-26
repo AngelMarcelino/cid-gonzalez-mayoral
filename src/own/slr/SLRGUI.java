@@ -1,4 +1,4 @@
-package shared;
+package slr;
 
 import jade.core.AID;
 
