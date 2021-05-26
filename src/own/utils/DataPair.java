@@ -1,4 +1,5 @@
-package slr;
+package utils;
+
 
 public class DataPair {
   private double x;

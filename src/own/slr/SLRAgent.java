@@ -1,9 +1,11 @@
-package slr;
+package shared;
 
 import java.util.ArrayList;
 
 import jade.core.Agent;
 import jade.core.behaviours.OneShotBehaviour;
+import utils.*;
+import slr.*;
 
 public class SLRAgent extends Agent {
   SLRGUI slrgui;
@@ -12,7 +14,7 @@ public class SLRAgent extends Agent {
     System.out.println("Agent "+getLocalName()+" started.");
     slr = new SLR();
     slr.setCollection(this.getDataSet());
-    slrgui = new SLRGUI(this);
+    slrgui = new SLRGUI(this);  
 		slrgui.showGui();
   }
 
@@ -31,15 +33,15 @@ public class SLRAgent extends Agent {
 
   private ArrayList<DataPair> getDataSet() {
     ArrayList<DataPair> dataSet = new ArrayList<DataPair>();
-    dataSet.add(new DataPair(23, 651));
-    dataSet.add(new DataPair(26, 762));
-    dataSet.add(new DataPair(30, 856));
-    dataSet.add(new DataPair(34, 1063));
-    dataSet.add(new DataPair(43, 1190));
-    dataSet.add(new DataPair(48, 1298));
-    dataSet.add(new DataPair(52, 1421));
-    dataSet.add(new DataPair(57, 1440));
-    dataSet.add(new DataPair(58, 1518));
+    dataSet.add(new DataPair(1, 3));
+    dataSet.add(new DataPair(2, 6));
+    dataSet.add(new DataPair(3, 9));
+    dataSet.add(new DataPair(4, 12));
+    dataSet.add(new DataPair(5, 15));
+    dataSet.add(new DataPair(6, 18));
+    dataSet.add(new DataPair(7, 21));
+    dataSet.add(new DataPair(8, 24));
+    dataSet.add(new DataPair(9, 27));
     return dataSet;
   }
 }

@@ -1,6 +1,7 @@
 package slr;
 
 import java.util.ArrayList;
+import utils.*;
 
 public class SLR {
   private double alpha;

@@ -1,39 +1,42 @@
-package shared;
-
-import jade.core.AID;
+package mlr;
 
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-import utils.*;
 
-class SLRGUI extends JFrame {	
-	private SLRAgent myAgent;
+class MLRGUI extends JFrame {	
+	private MLRAgent myAgent;
 	
-	private JTextField valueToPredictField;
+	private JTextField value1ToPredictField;
+	private JTextField value2ToPredictField;
 	
-	SLRGUI(SLRAgent a) {
+	MLRGUI(MLRAgent a) {
 		super(a.getLocalName());
 		
 		myAgent = a;
 		
 		JPanel p = new JPanel();
 		p.setLayout(new GridLayout(2, 2));
-		p.add(new JLabel("Valor a predecir:"));
-		valueToPredictField = new JTextField(15);
-		p.add(valueToPredictField);
+		p.add(new JLabel("Valor 1 a predecir:"));
+		value1ToPredictField = new JTextField(15);
+		p.add(value1ToPredictField);
+		p.add(new JLabel("Valor 2 a predecir:"));
+    value2ToPredictField = new JTextField(15);
+		p.add(value2ToPredictField);
 		getContentPane().add(p, BorderLayout.CENTER);
 		
 		JButton addButton = new JButton("Hacer prediccion");
 		addButton.addActionListener( new ActionListener() {
 			public void actionPerformed(ActionEvent ev) {
 				try {
-					String valueToPredict = valueToPredictField.getText().trim();
-					myAgent.makePrediction(Double.parseDouble(valueToPredict));
-					valueToPredictField.setText("");
+					String value1ToPredict = value1ToPredictField.getText().trim();
+					String value2ToPredict = value2ToPredictField.getText().trim();
+					myAgent.makePrediction(Double.parseDouble(value1ToPredict), Double.parseDouble(value2ToPredict));
+					value1ToPredictField.setText("");
+					value2ToPredictField.setText("");
 				}
 				catch (Exception e) {
-					JOptionPane.showMessageDialog(SLRGUI.this, "Valores invalidos. "+e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE); 
+					JOptionPane.showMessageDialog(MLRGUI.this, "Valores invalidos. "+e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE); 
 				}
 			}
 		} );
