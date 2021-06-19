@@ -19,11 +19,11 @@ public class MLRMatrixStrategy implements MLRStrategy {
     double[][] firstPart = matrixOperations.invert(matrixOperations.multiply(matrices.xTransposed, matrices.x));
     double[][] secondPart = matrixOperations.multiply(matrices.xTransposed, y);
     double[][] resultVector = matrixOperations.multiply(firstPart, secondPart);
-    for (int i = 0; i < resultVector.length; i++) {
-      for (int j = 0; j < 1; j++) {
-        System.out.print(resultVector[i][j] + ",");
-      }
-    }
+    // for (int i = 0; i < resultVector.length; i++) {
+    //   for (int j = 0; j < 1; j++) {
+    //     System.out.print(resultVector[i][j] + ",");
+    //   }
+    // }
     DataTriplet dt = new DataTriplet(resultVector[0][0], resultVector[1][0], resultVector[2][0]);
     return dt;
   }

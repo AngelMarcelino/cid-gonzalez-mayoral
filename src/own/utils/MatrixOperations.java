@@ -87,7 +87,6 @@ public class MatrixOperations {
       for (int j = 0; j < b[0].length; j++) {
         c[i][j] = 0;
         for (int k = 0; k < a[0].length; k++) {
-          System.out.println("Multiply " + a[i][k] + " * " + b[k][j]);
           c[i][j] += a[i][k] * b[k][j];
         }
         System.out.print(c[i][j] + " "); // printing matrix element
