@@ -74,7 +74,7 @@ public class KNN {
     System.out.println("Distances sorted");
     for (double[] e : distances) {
       int index = (int) e[1];
-      DataWithLabel currentElement = collection.get(index);
+      DataWithLabel currentElement = collection.get(index); 
       System.out.println("X1: " + currentElement.getX() + ", X2: " + currentElement.getY() + ", Class: "
           + currentElement.getLabel() + ", Distance: " + e[0]);
     }
